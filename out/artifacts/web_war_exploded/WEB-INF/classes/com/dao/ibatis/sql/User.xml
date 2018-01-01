@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="User">
+
+    <typeAlias alias="user" type="com.object.User"/>
+
+    <select id="GetUserById" resultClass="user" parameterClass="Integer">
+  <![CDATA[
+  SELECT
+      *
+    FROM users
+    WHERE user_id=#user_id#
+
+  ]]>
+  </select>
+
+    <insert id="InsertUser" parameterClass="user">
+  <![CDATA[
+    INSERT INTO users
+      (User_id,User_name,User_pwd,User_level,Will1,Will2,Will3,User_time)
+    VALUES
+      (#user_id#,#user_name#,#user_pwd#,#user_level#,#will1#,#will2#,#will3#,CURRENT_TIMESTAMP)
+  ]]>
+  </insert>
+
+    <update id="UpdateUser" parameterClass="user">
+  <![CDATA[
+      UPDATE users SET
+      User_name=#user_name#,
+      User_pwd=#user_pwd#,
+      User_level=#user_level#,
+      Will1=#will1#,
+      Will2=#will2#,
+      Will3=#will3#
+      User_time=#user_time#
+      where UserID=#user_id#
+  ]]>
+  </update>
+
+
+</sqlMap>

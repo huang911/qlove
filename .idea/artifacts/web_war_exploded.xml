@@ -1,0 +1,36 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="web:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/web_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="qlove/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="qlove" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/libs/thumbelina.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/smvc.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/sax2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/mysql-connector-java-5.0.5-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/juniversalchardet-1.0.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/junit.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/jna-4.0.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/filterbuilder.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/commons-pool-1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/commons-lang.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/jsoup-1.8.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/htmlparser.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/ibatis-common-2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/commons-httpclient-3.0.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/commons-logging-1.1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/htmllexer.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/ibatis-sqlmap-2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/ibatis-dao-2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/commons-codec-1.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/commons-dbcp-1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/commons-collections.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
