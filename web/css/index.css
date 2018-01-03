@@ -3,7 +3,7 @@
  */
 
 body {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: Georgia, "宋体", Times, serif;
     color: #555;
 }
 a:hover {
@@ -12,7 +12,20 @@ a:hover {
 hr{
     border:1px solid #EEE;
 }
-
+/*回到到顶部*/
+#toTop{
+  display:none;
+  position:fixed;
+  top:75%;
+  left:50%;
+  cursor:pointer;
+  margin-top:-50px;
+  margin-left:520px;
+}
+/*用CSS表达式(expression)来实现ie6下position:fixed效果*/
+#toTop{
+    _position:absolute;_top:expression(documentElement.scrollTop + documentElement.clientHeight * 3/4 + "px")
+}
 h1, .h1,
 h2, .h2,
 h3, .h3,

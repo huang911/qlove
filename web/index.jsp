@@ -163,13 +163,38 @@
 </div><!-- /.container -->
 
 <footer class="blog-footer">
-    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>©&nbsp;2017&nbsp;Huang and He&nbsp; 版权所有</p>
     <p>
-        <a href="#">Back to top</a>
+        <a href="javascript:;" id="toTop">回到顶部</a>
     </p>
 </footer>
-
 <script type="text/javascript" src="jquery/2.1.4/jquery.min.js"></script>
+<%--切换导航栏选项，样式改变--%>
+ <script text="text/javascript">
+     $(document).ready(function(){
+       $(".blog-nav-item").click(function(){
+           $(this).addClass("active").siblings().removeClass("active");
+       });
+     });
+ </script>
+<script>
+    function gotoTop(min_height){
+        /*html:只支持firefox,不支持chrome;body:只支持chrome,不支持firefox*/
+     $("#toTop").click(function(){$('html,body').animate({scrollTop:0},700);});
+          /*获取页面的最小高度，无传入值则默认为600像素*/
+        min_height ? min_height=min_height:min_height=600;
+         /*为窗口的scroll事件绑定处理函数*/
+        $(window).scroll(function(){
+            var s=$(window).scrollTop();
+            if(s>min_height){
+                $("toTop").fadeIn(100);
+            }else{
+                $("toTop").fadeOut(200);
+            }
+        });
+    }
+    gotoTop();
+</script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
